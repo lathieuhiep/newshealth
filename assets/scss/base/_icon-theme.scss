@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icon-theme/icomoon.eot?x7t9y2');
+  src:  url('../fonts/icon-theme/icomoon.eot?x7t9y2#iefix') format('embedded-opentype'),
+  url('../fonts/icon-theme/icomoon.ttf?x7t9y2') format('truetype'),
+  url('../fonts/icon-theme/icomoon.woff?x7t9y2') format('woff'),
+  url('../fonts/icon-theme/icomoon.svg?x7t9y2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check-circle:before {
+  content: "\e91d";
+}
+.icon-hours-support:before {
+  content: "\e900";
+}
+.icon-angle-left:before {
+  content: "\e901";
+}
+.icon-angle-right:before {
+  content: "\e902";
+}
+.icon-calendar:before {
+  content: "\e903";
+}
+.icon-caret-down:before {
+  content: "\e904";
+}
+.icon-caret-up:before {
+  content: "\e905";
+}
+.icon-chat:before {
+  content: "\e906";
+}
+.icon-chat-light:before {
+  content: "\e907";
+}
+.icon-chevron-down-light:before {
+  content: "\e908";
+}
+.icon-chevron-up-light:before {
+  content: "\e909";
+}
+.icon-clock:before {
+  content: "\e90a";
+}
+.icon-clock-rotate-right:before {
+  content: "\e90b";
+}
+.icon-close:before {
+  content: "\e90c";
+}
+.icon-envelope:before {
+  content: "\e90d";
+}
+.icon-facebook:before {
+  content: "\e90e";
+}
+.icon-facebook-messenger:before {
+  content: "\e90f";
+}
+.icon-facebook-messenger-circle:before {
+  content: "\e910";
+}
+.icon-globe:before {
+  content: "\e911";
+}
+.icon-hose:before {
+  content: "\e912";
+}
+.icon-house-light:before {
+  content: "\e913";
+}
+.icon-location:before {
+  content: "\e914";
+}
+.icon-menu:before {
+  content: "\e915";
+}
+.icon-phone:before {
+  content: "\e916";
+}
+.icon-phone-circle:before {
+  content: "\e917";
+}
+.icon-phone-light:before {
+  content: "\e918";
+}
+.icon-quote-left:before {
+  content: "\e919";
+}
+.icon-search:before {
+  content: "\e91a";
+}
+.icon-send:before {
+  content: "\e91b";
+}
+.icon-star:before {
+  content: "\e91c";
+}

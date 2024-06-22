@@ -1,0 +1,20 @@
+.element-list-image-content {
+  display: grid;
+
+  .item {
+    display: grid;
+    grid-template-rows: max-content;
+
+    &__thumbnail {
+      flex: 1;
+    }
+
+    &__content {
+      .title {
+        font-size: 1.7rem;
+        font-family: var(--body-font-family);
+        font-weight: 500;
+      }
+    }
+  }
+}

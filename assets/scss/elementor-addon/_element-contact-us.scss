@@ -1,0 +1,42 @@
+.element-contact-us {
+  &__list {
+    display: grid;
+
+    .item {
+      padding: 2rem;
+      position: relative;
+      min-height: 25.2rem;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &__image {
+        margin-bottom: 1.2rem;
+      }
+
+      &__body {
+        position: relative;
+
+        .title {
+          margin: 0;
+          font-size: 1.6rem;
+          color: #0D0D0D;
+        }
+
+        .desc {
+          margin-bottom: .2rem;
+          font-weight: 700;
+          line-height: 1.2;
+          font-size: 2rem;
+
+          a {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}

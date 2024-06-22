@@ -1,0 +1,51 @@
+.element-gallery-grid-box {
+  &__warp {
+    display: grid;
+    grid-auto-rows: min-content;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+
+      &__thumbnail {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
+      &__body {
+        flex: 1;
+
+        .title {
+          position: relative;
+          z-index: 2;
+          margin-bottom: .6rem;
+          color: #000000;
+          font-size: 1.6rem;
+          font-weight: 500;
+          font-family: var(--body-font-family);
+
+          @media (max-width: 1199px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        .content {
+          line-height: 1.5;
+
+          a {
+            color: var(--color-sunset-orange);
+          }
+        }
+      }
+    }
+  }
+}

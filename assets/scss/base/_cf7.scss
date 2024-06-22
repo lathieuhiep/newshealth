@@ -1,0 +1,92 @@
+form {
+  &.wpcf7-form {
+    position: relative;
+
+    br {
+      display: none;
+    }
+
+    p {
+      position: relative;
+      margin: 0;
+
+      span {
+        &.ajax-loader {
+          position: absolute;
+          top: 8px;
+        }
+      }
+
+      + p {
+        margin: 1rem 0 0;
+      }
+
+      &:has(.wpcf7-submit) {
+        margin-top: 2rem;
+        text-align: center;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    span {
+      &.required {
+        color: $color-hover;
+      }
+
+      &.wpcf7-form-control-wrap {
+        display: block;
+
+        ~ .wpcf7-form-control-wrap {
+          margin-top: .9rem;
+        }
+
+
+        input,
+        textarea {
+          height: auto;
+          width: 100%;
+          display: block;
+          border: none;
+          border-radius: .5rem;
+          padding: .4rem 1.2rem;
+          color: var(--body-color);
+          background-color: var(--color-white);
+        }
+
+        textarea {
+          height: 10rem;
+        }
+      }
+    }
+
+    .wpcf7-submit {
+      color: #fff;
+      padding: 5px 25px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      background: var(--color-sunset-orange);
+    }
+
+    .wpcf7-spinner {
+      position: absolute;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .wpcf7-not-valid-tip {
+      margin-top: .8rem;
+    }
+
+    .wpcf7-response-output {
+      margin: 1rem 0;
+    }
+  }
+}

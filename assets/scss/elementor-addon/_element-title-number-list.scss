@@ -1,0 +1,28 @@
+.element-title-number-list {
+  &__warp {
+    .item {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: auto 1fr;
+      align-items: end;
+
+      ~ .item {
+        margin-top: 2rem;
+      }
+    }
+
+    .number {
+      font-size: 2.5rem;
+      color: #FF0000;
+      line-height: 1.2;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      color: #000000;
+      transform: translateY(-2px);
+    }
+  }
+}

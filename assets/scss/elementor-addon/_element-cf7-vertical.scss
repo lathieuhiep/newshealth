@@ -1,0 +1,58 @@
+.element-cf7-vertical {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .wpcf7 {
+    overflow: hidden;
+  }
+
+  .wpcf7-form {
+    display: grid;
+
+    p {
+      margin: 0;
+
+      &:has(.wpcf7-submit) {
+        margin: 0;
+      }
+    }
+
+    .wpcf7-form-control {
+      font-family: var(--heading-font-family);
+      font-size: 2rem;
+      border-radius: .5rem;
+    }
+
+    .wpcf7-form-control-wrap {
+      .wpcf7-form-control {
+        height: 6rem;
+      }
+    }
+
+    .wpcf7-submit {
+      padding: 1.2rem 2.4rem;
+      font-weight: 700;
+      background-color: #E6171F;
+    }
+
+    .wpcf7-not-valid-tip {
+      font-size: 1.4rem;
+    }
+
+    .wpcf7-response-output {
+      margin: 0;
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
+
+  &.field-full {
+    .wpcf7-form {
+      @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

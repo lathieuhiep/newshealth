@@ -1,0 +1,84 @@
+.element-testimonial-slider {
+  .item {
+    background-color: var(--color-white);
+
+    &__top-box {
+      position: relative;
+      padding: 2rem 2.6rem 2.7rem;
+      font-weight: 700;
+      font-family: var(--heading-font-family);
+
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 20%;
+        height: .2rem;
+        background-color: #009AAC;
+      }
+
+      &:after {
+        position: absolute;
+        content: "\e919";
+        left: 20%;
+        bottom: -1.6rem;
+        font-family: "icomoon", serif;
+        color: var(--color-white);
+        font-size: 1.4rem;
+        @include square(3.3rem, 50%);
+        background-color: #009AAC;
+        @include flex-center();
+      }
+    }
+
+    &__body {
+      padding: 3rem 2.6rem;
+
+      .profile {
+        margin-bottom: 1.7rem;
+        display: grid;
+        grid-gap: 1.7rem;
+        grid-template-columns: 8rem 1fr;
+        align-items: center;
+
+        .avatar {
+          img {
+            width: auto;
+          }
+        }
+
+        .meta {
+          font-weight: 700;
+          font-family: var(--heading-font-family);
+
+          p {
+            margin: 0;
+          }
+
+          .info {
+            color: #D32664;
+          }
+        }
+      }
+
+      .vote {
+        margin-bottom: 1.2rem;
+        color: #FFC226;
+      }
+    }
+  }
+
+  .owl-carousel {
+    .owl-dots {
+      .owl-dot {
+        &.active,
+        &:hover {
+          span {
+            background-color: #F5EE3E;
+          }
+        }
+      }
+    }
+  }
+}
