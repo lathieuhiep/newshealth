@@ -6,8 +6,6 @@ $sticky_menu = newshealth_get_option( 'opt_menu_sticky', '1' );
     <?php
     get_template_part('components/header/inc','top-nav');
 
-    get_template_part('components/header/inc','top-nav-mobile');
-
     get_template_part('components/header/inc','menu');
 
     get_template_part('components/header/inc','contact-mobile');

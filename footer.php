@@ -4,7 +4,6 @@
 get_template_part('components/inc','loading');
 
 if ( !is_404() ) :
-    get_template_part('components/inc','contact-us');
 ?>
     <footer class="global-footer">
         <?php get_template_part( 'components/footer/inc','column' ); ?>

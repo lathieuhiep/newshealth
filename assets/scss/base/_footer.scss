@@ -33,10 +33,17 @@
 
   &__column {
     padding: 4rem 0 2rem;
-    background-image: url("../images/bk-footer.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    color: #ffffff;
+    background-color: #17222b;
+
+    a {
+      color: #ffffff;
+    }
+
+    .widget-title {
+      color: #ffffff;
+      font-size: 2.2rem;
+    }
   }
 }
 

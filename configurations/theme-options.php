@@ -85,33 +85,11 @@ if ( class_exists( 'CSF' ) ) {
         'fields' => array(
             // banner pc
             array(
-                'id'      => 'opt_general_banner_pc',
+                'id'      => 'opt_general_banner',
                 'type'    => 'media',
-                'title'   => esc_html__( 'Banner PC', 'newshealth' ),
+                'title'   => esc_html__( 'Banner', 'newshealth' ),
                 'library' => 'image',
                 'url'     => false
-            ),
-
-            // banner mobile
-            array(
-                'id'      => 'opt_general_banner_mobile',
-                'type'    => 'media',
-                'title'   => esc_html__( 'Banner Mobile', 'newshealth' ),
-                'library' => 'image',
-                'url'     => false
-            ),
-        )
-    ) );
-
-    // Slider
-    CSF::createSection( $newshealth_prefix, array(
-        'parent' => 'opt_general_section',
-        'title'  => esc_html__( 'Slider', 'newshealth' ),
-        'fields' => array(
-            array(
-                'id'    => 'opt_general_slider',
-                'type'  => 'gallery',
-                'title' => esc_html__( 'Slider', 'newshealth' ),
             ),
         )
     ) );
@@ -254,6 +232,62 @@ if ( class_exists( 'CSF' ) ) {
 			),
 		)
 	) );
+
+    //
+    // Create template home
+    CSF::createSection( $newshealth_prefix, array(
+        'id'    => 'opt_tpl_home_section',
+        'title' => esc_html__( 'Template Home', 'newshealth' ),
+        'icon'  => 'fas fa-bars',
+    ) );
+
+    // new posts
+    CSF::createSection( $newshealth_prefix, array(
+        'parent' => 'opt_tpl_home_section',
+        'title'  => esc_html__( 'Bài viết mới', 'newshealth' ),
+        'fields' => array(
+            array(
+                'id'      => 'opt_tpl_home_new_posts_order_by',
+                'type'    => 'select',
+                'title'   => esc_html__( 'Sắp xếp theo', 'newshealth' ),
+                'options' => array(
+                    'id'    => esc_html__( 'ID', 'newshealth' ),
+                    'title' => esc_html__( 'Title', 'newshealth' ),
+                    'date'  => esc_html__( 'Date', 'newshealth' ),
+                ),
+                'default' => 'id'
+            ),
+
+            array(
+                'id'      => 'opt_tpl_home_new_posts_order',
+                'type'    => 'select',
+                'title'   => esc_html__( 'Hiển thị', 'newshealth' ),
+                'options' => array(
+                    'ASC'    => esc_html__( 'Tăng dần', 'newshealth' ),
+                    'DESC' => esc_html__( 'Giảm dần', 'newshealth' ),
+                ),
+                'default' => 'id'
+            ),
+        )
+    ) );
+
+    // article category
+    CSF::createSection( $newshealth_prefix, array(
+        'parent' => 'opt_tpl_home_section',
+        'title'  => esc_html__( 'Danh mục bài viết', 'newshealth' ),
+        'fields' => array(
+            array(
+                'id'          => 'opt_tpl_home_list_category',
+                'type'        => 'select',
+                'title'       => esc_html__('Danh mục', 'newshealth'),
+                'placeholder' => esc_html__('Chọn danh mục hiển thị', 'newshealth'),
+                'chosen'      => true,
+                'multiple'    => true,
+                'sortable'    => true,
+                'options'     => 'categories',
+            ),
+        )
+    ) );
 
 	//
 	// -> Create a section blog

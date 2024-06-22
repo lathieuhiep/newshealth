@@ -43,7 +43,7 @@ $h6-font-size: $h6-font-size;
 $headings-color: $heading-color;
 $headings-font-family: $heading-font-family;
 $headings-margin-bottom: 1.2rem;
-$headings-font-weight: 700;
+$headings-font-weight: $headings-font-weight;
 $headings-line-height: $line-heading;
 
 // Paragraphs
@@ -58,7 +58,7 @@ $nav-link-font-weight: 400;
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-        xl: 1224px
+        xl: 1134px
 ) !default;
 
 // Include remainder of required Bootstrap stylesheets

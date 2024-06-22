@@ -149,7 +149,7 @@ function newshealth_col_use_sidebar( $option_sidebar, $active_sidebar ): string
 			$class_position_sidebar = ' order-1';
 		endif;
 
-		$class_col_content = 'col-12 col-md-8 col-lg-9' . $class_position_sidebar;
+		$class_col_content = 'col-12 col-md-8 col-lg-8' . $class_position_sidebar;
 	else:
 		$class_col_content = 'col-md-12';
 	endif;
@@ -159,7 +159,7 @@ function newshealth_col_use_sidebar( $option_sidebar, $active_sidebar ): string
 
 function newshealth_col_sidebar(): string
 {
-	return 'col-12 col-md-4 col-lg-3';
+	return 'col-12 col-md-4 col-lg-4';
 }
 
 // Post Meta
@@ -254,4 +254,20 @@ function newshealth_preg_replace_ony_number($string): string|null
     }
 
     return $number;
+}
+
+// create meta post views count
+function newshealth_add_post_views_count_field($post_id): void {
+    add_post_meta($post_id, 'post_views_count', 0, true);
+}
+add_action('publish_post', 'newshealth_add_post_views_count_field');
+
+// update post views count
+function newshealth_update_post_views_count(): void {
+    $post_id = get_the_ID();
+
+    if ($post_id) {
+        $current_views = (int)get_post_meta($post_id, 'post_views_count', true);
+        update_post_meta($post_id, 'post_views_count', $current_views + 1);
+    }
 }

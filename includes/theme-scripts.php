@@ -40,13 +40,18 @@ function newshealth_register_front_end(): void
 	/** Load css **/
 
 	// font google
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap', array(), null );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap', array(), null );
 
 	// bootstrap css
 	wp_enqueue_style( 'bootstrap', get_theme_file_uri( '/assets/libs/bootstrap/bootstrap.min.css' ), array(), '5.3.2' );
 
 	// style theme
 	wp_enqueue_style( 'newshealth-style', get_theme_file_uri( '/assets/css/style-theme.min.css' ), array(), newshealth_get_version_theme() );
+
+    // page template home
+    if ( is_page_template('templates/home.php') ) {
+        wp_enqueue_style( 'tpl-home', get_theme_file_uri( '/assets/css/templates/tpl-home.min.css' ), array(), newshealth_get_version_theme() );
+    }
 
 	// style post
 	if ( newshealth_is_blog() ) {
@@ -76,7 +81,7 @@ function newshealth_register_front_end(): void
 	wp_enqueue_script( 'newshealth-custom', get_theme_file_uri( '/assets/js/custom.min.js' ), array('jquery'), newshealth_get_version_theme(), true );
 
     // slider main js
-    if ( newshealth_is_blog() || is_singular('post') ) {
+    if ( newshealth_is_blog() || is_singular('post') || is_page_template('templates/home.php') ) {
         wp_enqueue_script( 'jquery.sticky-sidebar', get_theme_file_uri( '/assets/libs/sticky-sidebar/jquery.sticky-sidebar.min.js' ), array('jquery'), '3.3.1', true );
 
         wp_enqueue_script( 'post', get_theme_file_uri( '/assets/js/post.min.js' ), array('jquery'), newshealth_get_version_theme(), true );

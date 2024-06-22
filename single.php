@@ -11,6 +11,7 @@ $class_col_content = newshealth_col_use_sidebar( $sidebar, 'sidebar-post' );
             <div class="<?php echo esc_attr( $class_col_content ); ?>">
                 <?php
                 if ( have_posts() ) : while (have_posts()) : the_post();
+                    newshealth_update_post_views_count();
                     get_template_part( 'template-parts/post/content','single' );
                     endwhile;
                 endif;

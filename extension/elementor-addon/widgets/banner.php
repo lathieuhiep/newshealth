@@ -59,8 +59,7 @@ class Clinic_Elementor_Banner extends Widget_Base {
     }
 
     protected function render(): void {
-        $banner_pc = newshealth_get_option('opt_general_banner_pc');
-        $banner_mobile = newshealth_get_option('opt_general_banner_mobile');
+        $banner_pc = newshealth_get_option('opt_general_banner');
     ?>
 
         <div class="element-banner">

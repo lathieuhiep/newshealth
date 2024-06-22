@@ -14,7 +14,7 @@ const pathNodeModule = './node_modules'
 // server
 function server() {
     browserSync.init({
-        proxy: "localhost/newshealth",
+        proxy: "localhost/suckhoecantho",
         open: false,
         cors: true,
         ghostMode: false,
@@ -121,6 +121,23 @@ function buildJSElementor() {
         .pipe(browserSync.stream());
 }
 
+// Task build style templates
+function buildStylesTemplates() {
+    return src(`${pathAssets}/scss/templates/*.scss`)
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(dest(`${pathAssets}/css/templates/`))
+        .pipe(sourcemaps.init())
+        .pipe(minifyCss({
+            level: {1: {specialComments: 0}}
+        }))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.write())
+        .pipe(dest(`${pathAssets}/css/templates/`))
+        .pipe(browserSync.stream({ match: '**/*.css' }));
+}
+
 // Task build style custom post type
 function buildStylesCustomPostType() {
     return src(`${pathAssets}/scss/post-type/*/**.scss`)
@@ -163,6 +180,8 @@ async function buildProject() {
     await buildStylesTheme()
     await buildJSTheme()
 
+    await buildStylesTemplates()
+
     await buildStylesCustomPostType()
 
     await buildStylesElementor()
@@ -190,6 +209,11 @@ function watchTask() {
         `${pathAssets}/scss/variables-site/*.scss`,
         `${pathAssets}/scss/elementor-addon/*.scss`
     ], buildStylesElementor)
+
+    watch([
+        `${pathAssets}/scss/variables-site/*.scss`,
+        `${pathAssets}/scss/templates/*.scss`
+    ], buildStylesTemplates)
 
     watch([
         `${pathAssets}/scss/variables-site/*.scss`,
