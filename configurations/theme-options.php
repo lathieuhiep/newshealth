@@ -47,15 +47,6 @@ if ( class_exists( 'CSF' ) ) {
 				'url'     => false
 			),
 
-			// logo mobile
-			array(
-				'id'      => 'opt_general_logo_mobile',
-				'type'    => 'media',
-				'title'   => esc_html__( 'Logo Mobile', 'newshealth' ),
-				'library' => 'image',
-				'url'     => false
-			),
-
 			// show loading
 			array(
 				'id'         => 'opt_general_loading',
@@ -99,51 +90,12 @@ if ( class_exists( 'CSF' ) ) {
 		'parent' => 'opt_general_section',
 		'title'  => esc_html__( 'Giờ làm - Liên hệ', 'newshealth' ),
 		'fields' => array(
-            array(
-                'id'      => 'opt_general_address',
-                'type'    => 'text',
-                'title'   => esc_html__( 'Địa chỉ', 'newshealth' ),
-                'default' => esc_html__( '180 Trần phú - Phước Ninh', 'newshealth' )
-            ),
-
-			array(
-				'id'      => 'opt_general_working_time',
-				'type'    => 'text',
-				'title'   => esc_html__( 'Giờ làm việc', 'newshealth' ),
-				'default' => '7h30 - 20h'
-			),
-
 			array(
 				'id'      => 'opt_general_hotline',
 				'type'    => 'text',
 				'title'   => esc_html__( 'Hotline', 'newshealth' ),
 				'default' => '0888.888.115'
 			),
-
-            array(
-                'id'      => 'opt_general_link_map',
-                'type'    => 'text',
-                'title'   => esc_html__( 'Link địa chỉ map', 'newshealth' ),
-                'default' => '#'
-            ),
-
-			array(
-				'id'      => 'opt_general_cf',
-				'type'    => 'select',
-				'title'   => esc_html__( 'Form liên hệ', 'newshealth' ),
-				'desc'    => esc_html__( 'Hiển thị ở header trên mobile', 'newshealth' ),
-				'options' => newshealth_get_form_cf7(),
-			),
-
-			array(
-				'id'      => 'opt_general_medical_appointment_form',
-				'type'    => 'select',
-				'title'   => esc_html__( 'Form hẹn khám', 'newshealth' ),
-				'desc'    => esc_html__( 'Hiển thị khi click button hẹn khám', 'newshealth' ),
-				'options' => newshealth_get_form_cf7(),
-			),
-
-
 		)
 	) );
 
@@ -156,13 +108,6 @@ if ( class_exists( 'CSF' ) ) {
                 'id'      => 'opt_general_chat_doctor',
                 'type'    => 'text',
                 'title'   => esc_html__( 'Gặp bác sĩ', 'newshealth' ),
-                'default' => '#',
-            ),
-
-            array(
-                'id'      => 'opt_general_chat_messenger',
-                'type'    => 'text',
-                'title'   => esc_html__( 'Link messenger', 'newshealth' ),
                 'default' => '#',
             ),
 
@@ -239,36 +184,6 @@ if ( class_exists( 'CSF' ) ) {
         'id'    => 'opt_tpl_home_section',
         'title' => esc_html__( 'Template Home', 'newshealth' ),
         'icon'  => 'fas fa-bars',
-    ) );
-
-    // new posts
-    CSF::createSection( $newshealth_prefix, array(
-        'parent' => 'opt_tpl_home_section',
-        'title'  => esc_html__( 'Bài viết mới', 'newshealth' ),
-        'fields' => array(
-            array(
-                'id'      => 'opt_tpl_home_new_posts_order_by',
-                'type'    => 'select',
-                'title'   => esc_html__( 'Sắp xếp theo', 'newshealth' ),
-                'options' => array(
-                    'id'    => esc_html__( 'ID', 'newshealth' ),
-                    'title' => esc_html__( 'Title', 'newshealth' ),
-                    'date'  => esc_html__( 'Date', 'newshealth' ),
-                ),
-                'default' => 'id'
-            ),
-
-            array(
-                'id'      => 'opt_tpl_home_new_posts_order',
-                'type'    => 'select',
-                'title'   => esc_html__( 'Hiển thị', 'newshealth' ),
-                'options' => array(
-                    'ASC'    => esc_html__( 'Tăng dần', 'newshealth' ),
-                    'DESC' => esc_html__( 'Giảm dần', 'newshealth' ),
-                ),
-                'default' => 'id'
-            ),
-        )
     ) );
 
     // article category

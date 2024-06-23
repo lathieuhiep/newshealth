@@ -17,10 +17,6 @@ $show_related = newshealth_get_option('opt_post_single_related', '1');
 </div>
 
 <?php
-get_template_part( 'components/inc','single-note-box' );
-
-get_template_part( 'components/inc','single-contact-us' );
-
 get_template_part( 'components/inc','comment-form' );
 
 if ( $show_related == '1' ) :

@@ -9,11 +9,23 @@
   margin-bottom: 15px;
   font-size: 1.6rem;
 
-  &__detail {
-    h2 {
-      text-transform: uppercase;
-    }
+  h1 {
+    font-size: 2.4rem;
+  }
 
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4, h5, h6 {
+    font-size: 1.6rem;
+  }
+
+  &__detail {
     p, span, a, ul li, ul ol {
       @media (max-width: 767px) {
         word-spacing: 0.05rem;
@@ -104,9 +116,7 @@
 
   &__title {
     margin-bottom: 1.6rem;
-    line-height: 3rem;
     text-transform: uppercase;
-    color: #FC0000;
   }
 
   &__tax {
@@ -208,164 +218,6 @@
           a {
             color: #E6171F;
           }
-        }
-      }
-    }
-  }
-}
-
-.single-contact-us {
-  position: relative;
-  padding: 1.2rem 1.6rem;
-  background-image: url("../../../images/bk-support-single.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  &:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(40, 136, 79, 0.6);
-  }
-
-  .grid {
-    position: relative;
-    display: grid;
-    grid-gap: 2.4rem 4rem;
-    align-items: center;
-    border: .2rem solid var(--color-white);
-
-    @media (min-width: 1200px) {
-      padding: 2rem 2.4rem;
-    }
-
-    @media (max-width: 1199px) {
-      padding: 2rem 1.6rem;
-    }
-
-    @media (min-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .title {
-      font-weight: 900;
-      font-family: var(--body-font-family);
-
-      @media (min-width: 1200px) {
-        font-size: 2.9rem;
-      }
-
-      @media (max-width: 1199px) {
-        font-size: 2rem;
-      }
-
-      &.title-support {
-        margin-bottom: 2.5rem;
-        color: var(--color-white);
-      }
-
-      &.title-form {
-        margin-bottom: 1.7rem;
-        color: #F00;
-      }
-    }
-
-    .list-support {
-      display: grid;
-      align-items: center;
-
-      @media (min-width: 1200px) {
-        grid-gap: 2.4rem 3.5rem;
-      }
-
-      @media (max-width: 1199px) {
-        grid-gap: 2.4rem 1.2rem;
-      }
-
-      @media (min-width: 376px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      &__item {
-        @include flex-center();
-        flex-direction: column;
-
-        .thumbnail {
-          margin-bottom: 2.5rem;
-          position: relative;
-          @include square(9rem, 50%);
-          line-height: 100%;
-          @include flex-center();
-          background-color: var(--color-white);
-
-          &:before {
-            position: absolute;
-            content: "";
-            top: -0.5rem;
-            right: -0.5rem;
-            bottom: -0.5rem;
-            left: -0.5rem;
-            border-radius: 50%;
-            border: .5rem solid rgba(255,255,255,0.2);
-          }
-        }
-
-        a {
-          display: inline-block;
-          border: 2px solid var(--color-white);
-          border-radius: 2rem;
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: var(--color-white);
-          line-height: 2.2rem;
-
-          @media (min-width: 1200px) {
-            padding: .5rem 2rem;
-          }
-
-          @media (max-width: 1199px) {
-            padding: .5rem 1rem;
-          }
-
-          &.link-phone {
-            background-color: #FF0104;
-          }
-
-          &.link-chat {
-            background-color: #00AA50;
-          }
-        }
-      }
-    }
-
-    .box-form {
-      padding: 1.6rem;
-      border-radius: .5rem;
-      background-color: var(--color-white);
-      box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, 0.25);
-
-      .wpcf7-form {
-        .wpcf7-form-control-wrap {
-          input,
-          textarea {
-            padding: .9rem 1.4rem;
-            font-size: 1.6rem;
-            color: #000;
-            border: .1rem solid #B1B1B1;
-            border-radius: 0;
-            background: var(--color-white);
-          }
-        }
-
-        .wpcf7-submit {
-          padding: .4rem 3rem;
-          border-radius: 5rem;
-          font-size: 1.5rem;
-          font-weight: 700;
         }
       }
     }

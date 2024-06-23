@@ -11,7 +11,6 @@ if ( !is_404() ) :
 <?php
 	get_template_part('components/header/inc','menu-mobile');
 	get_template_part('components/inc','chat-with-us');
-    get_template_part('components/inc','contact-us-mobile');
 endif;
 
 wp_footer();

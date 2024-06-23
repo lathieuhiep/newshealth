@@ -73,19 +73,6 @@ require get_parent_theme_file_path( '/includes/theme-add-action.php' );
 // Required: theme shortcode
 require get_parent_theme_file_path( '/includes/theme-shortcode.php' );
 
-// Required: post type doctors
-require get_parent_theme_file_path( '/extension/post-type/doctors.php' );
-
-// Required: CMB2
-if ( !class_exists('CMB2') ) {
-	require get_parent_theme_file_path( '/configurations/meta-box/cmb_doctor.php' );
-}
-
-// Required: Elementor
-if ( did_action( 'elementor/loaded' ) ) :
-    require get_parent_theme_file_path( '/extension/elementor-addon/elementor-addon.php' );
-endif;
-
 // Require Register Sidebar
 require get_parent_theme_file_path( '/includes/register-sidebar.php' );
 
