@@ -548,7 +548,7 @@ if ( class_exists( 'CSF' ) ) {
 			array(
 				'id'       => 'opt_add_code_header',
 				'type'     => 'code_editor',
-				'title'    => esc_html__('Code', 'newshealth'),
+				'title'    => esc_html__('Header', 'newshealth'),
 				'sanitize' => false,
 				'settings' => array(
 					'theme'  => 'monokai'
@@ -556,6 +556,23 @@ if ( class_exists( 'CSF' ) ) {
 			),
 		)
 	) );
+
+    // add code body
+    CSF::createSection( $newshealth_prefix, array(
+        'parent' => 'opt_add_code_section',
+        'title'  => esc_html__( 'Thêm vào body', 'newshealth' ),
+        'fields' => array(
+            array(
+                'id'       => 'opt_add_code_body',
+                'type'     => 'code_editor',
+                'title'    => esc_html__('Body', 'newshealth'),
+                'sanitize' => false,
+                'settings' => array(
+                    'theme'  => 'monokai'
+                ),
+            ),
+        )
+    ) );
 
 	// add code footer
 	CSF::createSection( $newshealth_prefix, array(
@@ -565,7 +582,7 @@ if ( class_exists( 'CSF' ) ) {
 			array(
 				'id'       => 'opt_add_code_footer',
 				'type'     => 'code_editor',
-				'title'    => esc_html__('Code', 'newshealth'),
+				'title'    => esc_html__('Footer', 'newshealth'),
 				'sanitize' => false,
 				'settings' => array(
 					'theme'  => 'monokai'

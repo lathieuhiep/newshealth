@@ -145,6 +145,16 @@ function newshealth_add_code_header(): void {
 	}
 }
 
+// add code body
+add_action('wp_body_open', 'newshealth_add_code_body');
+function newshealth_add_code_body(): void {
+    $add_code = newshealth_get_option( 'opt_add_code_body' );
+
+    if ( $add_code ) {
+        echo $add_code;
+    }
+}
+
 // add code footer
 add_action('wp_footer', 'newshealth_add_code_footer');
 function newshealth_add_code_footer(): void {
